@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+h1{
+    margin: 20px auto;
+    color:  aliceblue;
+}
+header{
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 0 5px black;
+    font-size: 27px;
+    height: auto;
+    padding: 10px 0; 
+
+
+}
+.info{
+    width: 49%;
+    min-width: 370px; 
+    margin: auto;
+
+
+}
+.auth{
+    padding: auto;
+margin: auto;
+width: 49%;
+min-width: 370px;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    margin: 15px 5px;
+}
+p{
+    margin: 20px ;
+    font-size: 18px;
+    color: wheat;
+}
+button{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: wheat;
+    color: wheat;
+    font-size: 20px;
+}
+.click{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+.container div{
+    margin: auto;
+    box-shadow: 0 0 5px #042331;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+}
+a:visited,a{
+    color: wheat;
+    text-decoration: none;
+}

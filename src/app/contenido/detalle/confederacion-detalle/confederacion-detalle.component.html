@@ -1,0 +1,32 @@
+<header>
+    <h1>{{resultado.confederation_name}}</h1>
+</header>
+<main>
+    <div class="card">
+        <img [src]="resultado.confederation_logo" alt="logo de la confederacion" id="confederation_logo">
+        <hr>
+        <div class="international">
+            <h4>Torneos Internacionales</h4>
+            <ul class="tournaments">
+                <li *ngFor="let torneo of resultado.continental_tournament">
+                    <img [src]="torneo.tournament_logo" alt="pais bandera" class="country_flag">
+                    <h3>{{torneo.tournament_name | titlecase}}</h3>
+                </li>
+                <li id="agregar" [routerLink]="['/main/crear/competencia/internacional',resultado.id]"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828928.png" alt="" >
+                    <h3 id="">Agrega una competencia</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-info">
+         <div class="countries">
+            <ul class="countries-list">
+                <li *ngFor="let pais of resultado.countries" [routerLink]="['/main/pais',pais.id] " > 
+                <img [src]="pais.country_logo" alt="pais bandera" class="country_flag">
+
+                </li>
+            </ul>
+         </div>
+    </div>
+</main>

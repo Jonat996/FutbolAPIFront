@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="header">
+        <h1>País</h1>
+        <app-input placeholder="buscar pais..." (palabra)="obtenerPais($event)"></app-input>
+    </div>
+    <div class="list">
+        <div class="no-result" *ngIf="resultados.length<1">
+            <p>No hay resultados...</p>
+        </div>
+        <div class="card" *ngFor="let country of resultados">
+            <img [src]="country.country_logo" class="card-img-top" alt="{{country.country_name}}" srcset="">
+            <div class="card-title" [routerLink]="[ country.id]" routerLinkActive="router-link-active" ><h3 class="card-title">{{country.country_name}}</h3></div>
+        </div>
+
+    </div>
+</div>
+
+

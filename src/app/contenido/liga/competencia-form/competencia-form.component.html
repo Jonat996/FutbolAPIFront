@@ -1,0 +1,25 @@
+
+
+<form (ngSubmit)="enviarData()">
+    <h3>{{country |uppercase}} </h3>
+    <br>
+    <label for="league-name">Nombre de Competencia:</label>
+    <input class="form-item" uppercase type="text" name="league-name" id="league-name" [(ngModel)]="formulario.league_name"/>
+    <label for="country" class="seleccion">País</label>
+    <label for="division" class="seleccion">Nivel de importancia: </label>
+    <h4 class="form-item seleccion" > {{country |uppercase}} </h4>
+    <select class="form-item seleccion" name="division" id="division" [(ngModel)]="formulario.division_id" >
+        <option value="">selecciona</option>
+        <option value="1">Primera División</option>
+      <option value="2">Segunda División</option>
+      <option value="3">Tercera División</option>
+    </select>
+    <label for="logo">Copa del torneo:</label>
+    <input class="form-item" name="cup" type="text" placeholder="URL" id="cup" [(ngModel)]="formulario.cup"/>
+    <label for="logo">Imagen del torneo:</label>
+    <input class="form-item" name="logo" type="text" placeholder="URL" id="logo" [(ngModel)]="formulario.league_logo"/>
+    
+    <button type="submit">Enviar</button>
+  </form>
+
+  <app-dialog [respuesta]="response"></app-dialog>

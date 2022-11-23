@@ -1,0 +1,58 @@
+*{
+    text-align: center;
+    color: white;
+}
+header{
+    padding-top: 10px;
+    height: 100px;
+    box-shadow: 0px  0px 15px black;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+.country_name{
+    padding-top: 15px;
+}
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr))
+}
+
+#country_flag{
+    width: 60%;
+    min-width: 200px; 
+    margin: 10px 10px;
+}
+ img{
+    width: 10%;
+    margin-right: 20px;
+}
+ul{
+    padding: 5px 15px;
+    list-style: none;
+    
+}
+li{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    box-shadow: 0px 2px 5px black;
+    padding: 5px 2px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.info-list{
+    justify-content: space-between;
+    padding: 5px 10px;
+    height: 40px;
+    width: 90%;
+}
+.teams-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#agregar>img{
+    width: 40px;
+}

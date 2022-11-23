@@ -1,0 +1,9 @@
+<ng-container *ngIf="respuesta">
+    <dialog open  #dialog>
+        <h1>
+           {{respuesta}}
+            <br>
+            <button (click)="cerrarDialog()"> Ok</button>
+        </h1>
+      </dialog>
+</ng-container>

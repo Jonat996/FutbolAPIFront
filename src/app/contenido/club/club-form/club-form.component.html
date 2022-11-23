@@ -1,0 +1,27 @@
+
+<header>
+    <h1>Añade un Club</h1>
+  </header>
+
+<main>
+  <app-dialog [respuesta]="response"></app-dialog>
+    <form (ngSubmit)="enviarData()">
+        <h3>{{nombreLiga}} </h3>
+        <br>
+        <label for="team-name">Nombre del Equipo:</label>
+        <input class="form-item" uppercase type="text" name="team-name" id="team-name" [(ngModel)]="formulario.team_name" required/>
+        <label for="country" class="seleccion">Liga</label>
+        <label for="international" class="seleccion">Torneo Internacional: </label>
+        <h4 class="form-item seleccion" > {{nombreLiga}} </h4>
+        <select class="form-item seleccion" name="division" id="division" [(ngModel)]="formulario.international_id" required >
+            <option value="">selecciona</option>
+            <option value="">NO</option>
+            <option *ngFor="let torneo of torneos" value="{{torneo.id}}">{{torneo.name}} </option>
+        </select>
+        <label for="logo">Escudo del Equipo:</label>
+        <input class="form-item" name="logo" type="text" placeholder="URL" id="logo" [(ngModel)]="formulario.team_logo" required />
+        <button type="submit">Enviar</button>
+      </form>
+
+</main>
+

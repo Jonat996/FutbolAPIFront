@@ -1,0 +1,9 @@
+<header>
+  <h1>Crea una competencia</h1>
+</header>
+<main >
+
+<app-competencia-form *ngIf="param=='id'"></app-competencia-form>
+<app-torneo-internacional-form *ngIf="param=='conf_id'"></app-torneo-internacional-form>
+<app-club-form *ngIf="param=='liga_id'"></app-club-form>
+</main>

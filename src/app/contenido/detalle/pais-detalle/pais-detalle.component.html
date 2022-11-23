@@ -1,0 +1,33 @@
+<header>
+    <h1 class="country_name">{{resultado.country_name | uppercase}} </h1>
+</header>
+<main>
+    <div class="card">
+        <img [src]="resultado.country_logo" alt="bandera del país" id="country_flag">
+        <hr>
+        <div class="competencias-card">
+            <ul>
+                <li *ngFor="let league of resultado.leagues" [routerLink]="['/main/liga',league.id]"> 
+                    <img [src]="league.league_logo" alt="liga logo" id="league_logo">
+                    <h3 id="league_name">{{league.league_name | titlecase}} </h3>
+                </li>
+                <li id="agregar" [routerLink]="['/main/crear/competencia/liga',resultado.id]"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828928.png" alt="" >
+                    <h3 id="">Agrega una competencia</h3>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+    <div class="info-card">
+            <h4>Información</h4>
+            <ul>
+                <li class="info-list"><h3>Continente:</h3><p>{{resultado.continent.continent_name}}</p> </li>
+                <li class="info-list"><h3>Confederación:</h3><p>{{resultado.confederation.confederation_name}} </p> </li>
+                <li class="info-list"><h3>Torneos Locales:</h3><p>{{resultado.leagues.length}} </p> </li>
+            
+            </ul>
+
+    </div>
+</main>

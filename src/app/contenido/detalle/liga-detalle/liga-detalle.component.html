@@ -1,0 +1,31 @@
+<header>
+    <h1>{{resultado.league_name}}</h1>
+</header>
+<main>
+    <div class="card">
+        <img [src]="resultado.league_logo" alt="logo de la liga" id="league_logo">
+        <hr>
+        <div class="international">
+            <h4>Información</h4>
+            <ul>
+                <li class="info-list"><h3>País:</h3><p><img [src]="resultado.country.country_logo" alt="pais" id="country_flag"></p> </li>
+                <li class="info-list"><h3>Confederación:</h3><p>{{resultado.country.confederation.confederation_name}} </p> </li>
+                <li class="info-list"><h3>Equipos:</h3><p>{{resultado.teams.length}} </p> </li>
+                <li class="info-list"><h3>Categoria:</h3><p>{{resultado.division.division_name}} </p> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-info">
+         <div class="teams">
+            <ul class="teams-list">
+                <li *ngFor="let team of resultado.teams" [routerLink]="['/main/club',team.id]"> 
+                <img [src]="team.team_logo" alt="team bandera" class="country_flag">
+                </li>
+                <li id="agregar" [routerLink]="['/main/crear/club',resultado.id]"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828928.png" alt="" >
+                </li>
+            </ul>
+         </div>
+
+    </div>
+</main>

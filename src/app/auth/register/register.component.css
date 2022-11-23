@@ -1,0 +1,79 @@
+.container{
+  display: flex;
+    background-color:   #042331;
+justify-content: center;
+height: 100vh;
+}
+.vista{
+    margin: auto;
+    padding: 50px;
+}
+.vista img{
+    width: 150px;
+    filter: drop-shadow(0 0 2px  white);
+    
+}
+.card{
+    height: 98vh;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:   #042331;
+    color: white;
+}
+form{
+max-width: 500px;
+ width: auto;
+ min-width: 350px;
+ text-align: center;
+ margin-top: 35px;
+
+
+}
+input{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 5px solid rgb(37, 112, 70);
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: rgb(37, 112, 70);
+    outline: none;
+    text-align: center;
+    color: white;
+}
+.middle{
+    display: inline-block;
+    width: 45%;
+    margin-left: 5px;
+}
+
+img{
+    box-sizing: none;
+    filter: drop-shadow(-5px -5px 2px rgb(37, 112, 70));
+}
+#ball-image{
+
+    padding: 20px 50px;
+    width: 100px;
+    animation-name: ball;
+    animation-duration: 2s;
+}
+button{
+    margin-top: 20px;
+    background-color:rgb(37, 112, 70);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    border-color: currentColor;
+}
+ img:hover{
+    width: 165px;
+    filter: drop-shadow(-5px -5px 2px rgb(37, 112, 70));
+}
+h1{
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<header>
+    <h1>Añade un Club</h1>
+  </header>
+<main>
+  <app-dialog [respuesta]="response"></app-dialog>
+    <form (ngSubmit)="enviarData()">
+      
+        <h3>{{Equipo.team_name}} </h3>
+        <br>
+        <label for="tournament">Torneo</label>
+        <ng-container *ngIf="nacional;else internacional">
+          <select name="tournament" id="tournament" class="seleccion form-item" [(ngModel)]="formulario.national_tournament_id">
+            <option value="">selecciona</option>
+            <option *ngFor="let torneo of Torneos" value="{{torneo.id}}"> {{torneo.name}} </option>
+          </select>
+        </ng-container>
+  <ng-template #internacional>
+    <select name="tournament" id="tournament" class="seleccion form-item"  [(ngModel)]="formulario.continental_tournament_id" >
+      <option value="">selecciona</option>
+      <option *ngFor="let torneo of Torneos" value="{{torneo.id}}"> {{torneo.name}} </option>
+    </select>
+  </ng-template>
+  <br>
+  <label for="" class="seleccion">Ganador</label>      
+  <label for="sub_campeon" class="seleccion">
+    Sub Campeon
+  </label>
+  <h4 class="form-item seleccion">{{Equipo.team_name}} </h4>
+
+        <select name="oponente" id="" class="seleccion form-item" [(ngModel)]="formulario.oponent_id">
+          <option value="">selecciona</option>
+          <option value="{{club.id}}" *ngFor="let club of Clubes">{{club.team_name}} </option>
+        </select>
+        <br>
+        <label for="">Año: </label>
+        <input type="number" placeholder="YYYY"  name="year" [(ngModel)]="formulario.year" class="form-item">
+        
+        <button type="submit">Enviar</button>
+      </form>
+
+</main>

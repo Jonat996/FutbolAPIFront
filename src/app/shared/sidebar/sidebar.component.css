@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Josefin+Sans:ital@0;1&family=Kanit:wght@300&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0 ;
+    font-family: 'Hammersmith One', sans-serif;
+}
+html body{
+
+    display: block;
+}
+.nav{
+    position: fixed;
+    background-color: #042331;
+    height: 100%;
+    border-radius: 5px;
+}
+.nav ul li{
+    color: white;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid rgba(100,100,100,.3);
+    border-radius: 5px;
+    padding: 15px 0;
+}
+#ball-image{
+    
+    padding: 20px 50px;
+    width: 100px;
+    animation-name: ball;
+    animation-duration: 2s;
+}
+#ball-image:hover{
+
+animation-name: ball-boing;
+animation-duration: 1s;
+
+}
+.head{
+    border-radius: 5px;
+    background-color: #063146;
+}
+.nav ul li:hover{
+padding-left: 25px;
+color: wheat;
+cursor: pointer;
+background-color: #042331;
+}
+h4{
+    color: wheat;
+    text-align: center;
+}
+@keyframes ball {
+    
+    100%{transform:rotate(360deg);}
+}
+@keyframes ball-boing {
+    0%{padding-top: 20px;
+        padding-bottom: 0;
+    }
+    25%{padding-top: 40px;}
+    50%{padding-top: 45px;}
+
+}

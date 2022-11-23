@@ -1,0 +1,56 @@
+* {
+  text-align: center;
+  color: white;
+}
+header {
+  padding-top: 10px;
+  height: 100px;
+  box-shadow: 0px 0px 15px black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+li > img {
+  width: 100px;
+  margin: 10px 10px;
+
+}
+ul {
+  padding: 5px 15px;
+  list-style: none;
+}
+li {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  box-shadow: 0px 2px 5px black;
+  padding: 5px 2px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.tournaments > li {
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.countries-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.counrties-list > li {
+  width: min-content;
+  border-radius: 5%;
+  box-shadow: 0px 2px 5px white;
+}
+#agregar>img{
+    width: 40px;
+}
+#confederation_logo{
+  width: 50%;
+}

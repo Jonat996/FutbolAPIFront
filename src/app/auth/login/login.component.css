@@ -1,0 +1,66 @@
+.container{
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    width: 99vw;
+}
+
+.card{
+    height: 95vh;
+    width: 50%;
+    min-width: 360px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:   #042331;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+form{
+ width: 100%;
+ text-align: center;
+ margin-top: 35px;
+
+
+}
+input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-bottom: 5px solid rgb(37, 112, 70);
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: rgb(37, 112, 70);
+    outline: none;
+    text-align: center;
+    color: white;
+}
+img{
+    box-sizing: none;
+    filter: drop-shadow(-5px -5px 2px rgb(37, 112, 70));
+}
+#ball-image{
+
+    padding: 20px 50px;
+    width: 100px;
+    animation-name: ball;
+    animation-duration: 2s;
+}
+button{
+    margin-top: 20px;
+    background-color:rgb(37, 112, 70);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    
+}
+.vista img:hover{
+    width: 165px;
+    filter: drop-shadow(-5px -5px 2px rgb(37, 112, 70));
+
+
+}

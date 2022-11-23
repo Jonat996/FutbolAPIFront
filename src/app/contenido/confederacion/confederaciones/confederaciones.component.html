@@ -1,0 +1,11 @@
+<header>
+    <h1>Confederaciones</h1>
+</header>
+<main>
+    <div class="container">
+        <div class="card" *ngFor="let confederacion of resultado">
+            <img [src]="confederacion.confederation_logo" alt="confederacion imagen">
+            <h3 class="card-title" [routerLink]="['/main/confederacion', confederacion.id]"> {{confederacion.confederation_name}} </h3>
+        </div>
+    </div>
+</main>

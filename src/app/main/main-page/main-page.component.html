@@ -1,0 +1,11 @@
+
+<div class="container">
+        <nav [class]="(box)? 'nav-active': 'nav-unactive' " >
+            <app-sidebar class="nav"></app-sidebar>
+        </nav>
+    <div class="screen" [class]="(box)? 'nav-unactive': 'nav-active' " >
+        <router-outlet></router-outlet>
+        </div>
+  </div>
+  <input type="checkbox" name="" id="check" #check>   
+<label for="check"><img src="../../../assets/img/menu-1.1s-200px (1).svg" (click)="activar()" class="boton" alt="nav" srcset=""> </label>
